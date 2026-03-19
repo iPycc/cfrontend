@@ -248,6 +248,7 @@ export interface GlobalStateSlice {
   uploadRawPromiseId?: string[];
 
   policyOptionCache?: StoragePolicy[];
+  selectedPolicyId?: string;
 
   // Search popup
   searchPopupOpen?: boolean;
@@ -381,6 +382,9 @@ export const globalStateSlice = createSlice({
     },
     setPolicyOptionCache: (state, action: PayloadAction<StoragePolicy[] | undefined>) => {
       state.policyOptionCache = action.payload;
+    },
+    setSelectedPolicyId: (state, action: PayloadAction<string | undefined>) => {
+      state.selectedPolicyId = action.payload;
     },
     resetDialogs: (state) => {
       state.aggregatedErrorDialogOpen = state.aggregatedErrorDialogOpen ? false : undefined;
@@ -888,6 +892,7 @@ export const {
   closeSaveAsDialog,
   resetDialogs,
   setPolicyOptionCache,
+  setSelectedPolicyId,
   setSearchPopup,
   setExcalidrawViewer,
   closeExcalidrawViewer,
