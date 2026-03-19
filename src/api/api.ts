@@ -60,6 +60,7 @@ import {
   ListFileService,
   ListResponse,
   MoveFileService,
+  StoragePolicy,
   MultipleUriService,
   PatchMetadataService,
   PatchViewSyncService,
@@ -323,6 +324,22 @@ export function getUserCapacity(): ThunkResponse<Capacity> {
     return await dispatch(
       send(
         "/user/capacity",
+        {
+          method: "GET",
+        },
+        {
+          ...defaultOpts,
+        },
+      ),
+    );
+  };
+}
+
+export function getUserStoragePolicies(): ThunkResponse<StoragePolicy[]> {
+  return async (dispatch, _getState) => {
+    return await dispatch(
+      send(
+        "/user/policy",
         {
           method: "GET",
         },

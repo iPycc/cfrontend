@@ -144,7 +144,8 @@
     "toDarkMode": "黑暗",
     "toLightMode": "浅色",
     "myProfile": "个人主页",
-    "dashboard": "管理面板"
+    "dashboard": "管理面板",
+    "storagePolicy": "存储策略"
   },
   "fileManager": {
     "continueInDesktop": "授权成功，请在桌面客户端中继续操作。",

@@ -6,6 +6,7 @@ import TreeNavigation from "../../FileManager/TreeView/TreeNavigation.tsx";
 import { PageVariant, PageVariantContext } from "../NavBarFrame.tsx";
 import DrawerHeader from "./DrawerHeader.tsx";
 import PageNavigation, { AdminPageNavigation } from "./PageNavigation.tsx";
+import StoragePolicySwitcher from "./StoragePolicySwitcher.tsx";
 import StorageSummary from "./StorageSummary.tsx";
 
 const DrawerContent = () => {
@@ -35,6 +36,7 @@ const DrawerContent = () => {
           <>
             <TreeNavigation scrollRef={scrollRef} hideWithDrawer={!isMobile} />
             <PageNavigation />
+            {user && <StoragePolicySwitcher />}
             {user && <StorageSummary />}
           </>
         )}

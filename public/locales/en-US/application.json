@@ -144,7 +144,8 @@
     "toDarkMode": "Dark",
     "toLightMode": "Light",
     "myProfile": "My profile",
-    "dashboard": "Dashboard"
+    "dashboard": "Dashboard",
+    "storagePolicy": "Storage Policy"
   },
   "fileManager": {
     "continueInDesktop": "Authorization successful, please continue in the desktop client.",
