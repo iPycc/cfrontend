@@ -108,7 +108,7 @@ const StoragePolicySwitcher = memo(() => {
         }
       });
     }
-  }, [policies]);
+  }, [policies, dispatch, selectedPolicyId]);
 
   const handleChange = useCallback(
     (e: SelectChangeEvent<string>) => {
